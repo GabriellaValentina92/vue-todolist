@@ -22,9 +22,9 @@
 
         <div class="list">
             <ul v-if="todo.length != 0">
-                <li v-for="tasks in todo" class="task"> 
+                <li v-for="(tasks, i) in todo" class="task"> 
                     {{tasks.text}} 
-                    <i class="fa-solid fa-xmark"></i> 
+                    <i class="fa-solid fa-xmark" @click="deleteTask(i)"></i> 
                 </li>
             </ul>
             <h2 v-else>Mission Completed</h2>

@@ -50,6 +50,10 @@ const app = Vue.createApp({
             } else {
                 this.error = true;
             }
+        },
+
+        deleteTask(i){
+            this.todo.splice(i, 1);
         }
     },
 });
