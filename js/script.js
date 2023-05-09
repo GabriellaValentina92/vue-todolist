@@ -43,7 +43,7 @@ const app = Vue.createApp({
     methods: {
         addtolist(){
             let cleanToDo = this.pushToList.trim();
-            if(cleanToDo >= 5){
+            if(cleanToDo.length >= 5){
                 this.todo.unshift(this.cleanToDo);
                 this.pushToList = '';
                 this.error = false;
