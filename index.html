@@ -15,7 +15,10 @@
 
         <h1>{{ listTitle }}</h1>
         <div class="AddTask">
-            <input @keyup.enter="addtolist" type="text" v-model="pushToList">
+            <input
+            type="text"
+            @keyup.enter="addtolist" 
+            v-model="pushToList">
             <button @click="addtolist">Aggiungi</button>
             <div v-show="error" class="error">la parola deve essere più lunga di 5 caratteri</div>
         </div>

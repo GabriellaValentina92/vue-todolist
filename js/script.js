@@ -44,7 +44,11 @@ const app = Vue.createApp({
         addtolist(){
             let cleanToDo = this.pushToList.trim();
             if(cleanToDo.length >= 5){
-                this.todo.unshift(this.cleanToDo);
+                let newToDo = {
+                    text : cleanToDo,
+                    done : false,
+                }
+                this.todo.unshift(newToDo);
                 this.pushToList = '';
                 this.error = false;
             } else {
