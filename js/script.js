@@ -58,7 +58,12 @@ const app = Vue.createApp({
 
         deleteTask(i){
             this.todo.splice(i, 1);
+        },
+
+        lineThrough(task){
+            task.done = !task.done;
         }
+
     },
 });
 

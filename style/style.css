@@ -7,3 +7,7 @@
 .todolist{
     text-align: center;
 }
+
+.taskcut{
+    text-decoration: line-through;
+}
